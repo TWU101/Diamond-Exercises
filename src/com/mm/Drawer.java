@@ -33,6 +33,11 @@ public class Drawer {
         }
     }
 
+    private void drawCenteredName(String name, int number){
+        drawHorizontalSpaces((2*number-1)/2-(name.length()/2));
+        System.out.println(name);
+    }
+
     private void drawIsosTriangle(int number, int constant) {
         if (number != 1){
             drawIsosTriangle(number-1, constant);
@@ -63,6 +68,18 @@ public class Drawer {
     public void drawDiamond(int number) {
         drawIsosTriangle(number);
         drawIsosTriangleInverted(number);
+    }
+
+
+    public void drawNameDiamond(int number, String name) {
+        int temp = 8;
+        if (number > 8){
+            temp = number;
+        }
+
+        drawIsosTriangle(number-1, temp);
+        drawCenteredName(name, temp);
+        drawIsosTriangleInverted(number-1, temp);
     }
 }
 

@@ -10,5 +10,8 @@ public class Main {
 
         //Given a number n, print a centered diamond.
         drawer.drawDiamond(10);
+
+        //Given a name, print a centered diamond around name
+        drawer.drawNameDiamond(20, "Mauricio");
     }
 }
