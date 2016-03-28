@@ -45,5 +45,24 @@ public class Drawer {
     public void drawIsosTriangle(int number) {
         drawIsosTriangle(number, number);
     }
+
+    private void drawIsosTriangleInverted(int number, int constant) {
+
+        drawHorizontalSpaces(Math.abs(number-constant));
+        drawHorizontalStars(2*number-1);
+        System.out.println();
+        if (number != 1){
+            drawIsosTriangleInverted(number-1, constant);
+        }
+    }
+
+    public void drawIsosTriangleInverted(int number) {
+        drawIsosTriangleInverted(number-1, number);
+    }
+
+    public void drawDiamond(int number) {
+        drawIsosTriangle(number);
+        drawIsosTriangleInverted(number);
+    }
 }
 

@@ -7,5 +7,8 @@ public class Main {
 
         //Draw an Isosceles Triangle
         drawer.drawIsosTriangle(5);
+
+        //Given a number n, print a centered diamond.
+        drawer.drawDiamond(10);
     }
 }
