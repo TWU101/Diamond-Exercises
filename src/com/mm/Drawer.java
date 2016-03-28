@@ -18,21 +18,6 @@ public class Drawer {
         }
     }
 
-    public void drawVerticalLine(int number) {
-        for (int i = 0; i < number; i++) {
-            System.out.println("*");
-        }
-    }
-
-    public void drawRightTriangle(int number) {
-        for (int i = 1; i <= number + 1; i++) {
-            for (int j = 1; j < i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-
     private void drawCenteredName(String name, int number){
         drawHorizontalSpaces((2*number-1)/2-(name.length()/2));
         System.out.println(name);
