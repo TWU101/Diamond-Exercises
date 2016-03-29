@@ -2,10 +2,6 @@ package com.mm;
 
 public class Drawer {
 
-    public void printOne() {
-        System.out.println("*");
-    }
-
     public void drawHorizontalStars(int number) {
         for (int i = 0; i < number; i++) {
             System.out.print("*");
@@ -19,8 +15,8 @@ public class Drawer {
     }
 
     private void drawCenteredName(String name, int number){
-        drawHorizontalSpaces((2*number-1)/2-(name.length()/2));
-        System.out.println(name);
+            drawHorizontalSpaces((number-1) - (name.length() / 2));
+            System.out.println(name);
     }
 
     private void drawIsosTriangle(int number, int constant) {
@@ -57,14 +53,21 @@ public class Drawer {
 
 
     public void drawNameDiamond(int number, String name) {
-        int temp = 8;
-        if (number > 8){
-            temp = number;
+        if (number ==1){
+            System.out.println(name);
+        } else if (number <= 0){
+            System.out.println("That's not a valid number.");
         }
+        else {
+            int temp = 8;
+            if (number > 8) {
+                temp = number;
+            }
 
-        drawIsosTriangle(number-1, temp);
-        drawCenteredName(name, temp);
-        drawIsosTriangleInverted(number-1, temp);
+            drawIsosTriangle(number - 1, temp);
+            drawCenteredName(name, temp);
+            drawIsosTriangleInverted(number - 1, temp);
+        }
     }
 }
 
